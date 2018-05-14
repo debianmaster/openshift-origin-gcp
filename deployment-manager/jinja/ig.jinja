@@ -47,14 +47,14 @@ limitations under the License.
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: projects/{{ env["project"] }}/global/images/{{ properties["image"] }}
+        sourceImage: projects/centos-cloud/global/images/{{ properties["image"] }}
     {% for disk in properties["disks"] %}
     - deviceName: {{ diskName(disk) }}
       type: PERSISTENT
       boot: false
       autoDelete: true
       initializeParams:
-        sourceImage: projects/{{ env["project"] }}/global/images/empty-disk-image
+        sourceImage: projects/centos-cloud/global/images/empty-disk-image
         diskSizeGb: {{ disk["sizeGb"] }}
         diskType: {{ disk["diskType"] }}
     {% endfor %}
@@ -112,7 +112,7 @@ limitations under the License.
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: projects/{{ env["project"] }}/global/images/{{ properties["image"] }}
+        sourceImage: projects/centos-cloud/global/images/{{ properties["image"] }}
     {% for disk in properties["disks"] %}
     - deviceName: {{ diskName(disk,i) }}
       type: PERSISTENT

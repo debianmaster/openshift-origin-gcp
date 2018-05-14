@@ -51,7 +51,7 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: projects/{{ env["project"] }}/global/images/{{ properties["image"] }}
+        sourceImage: projects/centos-cloud/global/images/{{ properties["image"] }}
     metadata:
       items:
       - key: startup-script
